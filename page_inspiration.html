@@ -1,0 +1,30 @@
+<div class="lfs-container">
+    <div class="custom-slider-container container row-fluid">
+        <div class="hfeed content span12">
+            <div class="inspiration-page-banner">
+                [slideshow category="Banner" width="1170" height="150" slider_remove_link_to_image="true" remove_link_to="true" slider_margin="false"]
+            </div>
+        </div>
+    </div>
+
+    <div class="inspiration-page-wrapper">
+        <div class="inspiration-container">
+            [loop query="category_name=Topic&posts_per_page=6&orderby=the_date&order=asc"]
+                <div class="topic-item">
+                    [image_with_src]
+                    [link_with_content content=""]
+                    <div class="topic-info">
+                        <span class="title">[link_with_content]</span>
+                    </div>
+                </div>
+            [/loop]
+        </div>
+    </div>
+</div>
+
+
+<style>
+.page-title {
+    display: none;
+}
+</style>

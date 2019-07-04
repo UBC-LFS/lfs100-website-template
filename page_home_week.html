@@ -1,0 +1,107 @@
+<div class="lfs-container">
+    <div class="home-page-wrapper">
+        <div class="home-container">
+            [loop query="category_name=Week&posts_per_page=12&orderby=the_date&order=asc"]
+                <div class="week-item">
+                    [image_with_src]
+                    [link_with_content content=""]
+                    <div class="week-info">
+                        <span class="title">[link_with_content]</span>
+                        <span class="date">Sept. 1 ~ Sept. 7</span>
+                        <span class="sub-title">APIE</span>
+                    </div>
+                </div>
+            [/loop]
+        </div>
+    </div>    
+</div>
+
+
+
+<style>
+.page-title {
+    display: none;
+}
+</style>
+
+
+
+<javascript>
+// Change name, date, sub-title of weeks
+var info = [
+  { 
+    "week": "Syllabus",
+    "date": "", 
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 1",
+    "date": "Sept. 1 ~ Setp. 7",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 2",
+    "date": "Sept. 8 ~ Setp. 14",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 3",
+    "date": "Sept. 15 ~ Setp. 21",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 4",
+    "date": "Sept. 22 ~ Setp. 28", 
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 5",
+    "date": "Sept. 29 ~ Setp. 30", 
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 6",
+    "date": "Oct. 1 ~ Oct. 7", 
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 7",
+    "date": "Oct. 8 ~ Oct. 14", 
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 8",
+    "date": "Oct. 15 ~ Oct. 21",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 9",
+    "date": "Oct. 22 ~ Oct. 28",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Week 10",
+    "date": "Oct. 29 ~ Oct. 31",
+    "sub-title": "APIE "
+  },
+  { 
+    "week": "Resources",
+    "date": "", 
+    "sub-title": "APIE "
+  }
+];
+
+
+var weekItems = document.getElementsByClassName('week-item');
+
+[...weekItems].forEach(function(item, index) {
+  console.log(index);
+  console.log(item);
+  
+  var weekInfo = item.querySelector('.week-info');
+  var date = weekInfo.querySelector('.date');
+  var subTitle = weekInfo.querySelector('.sub-title');
+  date.innerHTML = info[index]['date'];
+  subTitle.innerHTML = info[index]['sub-title'];
+});
+</javascript>

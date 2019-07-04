@@ -1,0 +1,362 @@
+/* Page - Home landing page */
+
+.lfs-container .home-page-wrapper .home-container,
+.lfs-container .inspiration-page-wrapper .inspiration-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+/*.author-ho-seok-oh .post-byline {
+    display: none;
+}*/
+
+.lfs-container .home-page-wrapper br,
+.lfs-container .welcome-page-wrapper br,
+.lfs-container .inspiration-page-wrapper br,
+.lfs-container .feedback-page-wrapper br,
+.lfs-container .week-post-wrapper br {
+    display: none;
+}
+
+.lfs-container .home-page-wrapper,
+.lfs-container .welcome-page-wrapper,
+.lfs-container .inspiration-page-wrapper,
+.lfs-container .feedback-page-wrapper,
+.lfs-container .topic-post-wrapper {
+    margin: 0 40px;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item {
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.lfs-container .home-page-wrapper .home-container p,
+.lfs-container .assessment-page-wrapper .assessment-container p,
+.lfs-container .inspiration-page-wrapper .inspiration-container p {
+    display: none;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item > a,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 38, 51, 0.4);
+    color: #fff;
+    text-decoration: none;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info > span {
+    display: block;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .title,
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info .title {
+    font-size: 1.3rem;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .title > a,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info .title > a {
+    color: #fff;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
+    margin: 10px 0;
+    height: 22px;
+}
+
+
+/* Page - Welcome */
+
+.lfs-container .welcome-page-wrapper > img {
+    border: 1px solid #ddd;
+    padding: 3px
+}
+.lfs-container .welcome-page-wrapper .text {
+    margin: 40px 0;
+}
+
+
+
+/* Assessments */
+.lfs-container .assessment-page-wrapper {
+    margin: 30px 100px 0 100px;
+}
+
+.lfs-container .assessment-page-wrapper .assessment-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item {
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name {
+    position: absolute;
+    background-color: rgba(122, 122, 122, 0.7);
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 5px 5px 5px;
+}
+
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title > a {
+    color: black;
+}
+
+
+/* Page - FAQS */
+.lfs-container .search-field {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lfs-container .search-field > br {
+    display: none;
+}
+
+.lfs-container .search-field > input {
+    margin-bottom: 0;
+}
+
+.lfs-container .faqs-search-results {
+    margin-top: 20px;
+}
+
+
+
+/* Page - Inspiration */
+.lfs-container .inspiration-page-banner .slides img {
+    opacity: 0.5;
+}
+
+.lfs-container .inspiration-page-banner .carousel-caption {
+    background: none;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 150px !important;
+    /*background-color: rgba(222, 232, 249, 0.5);*/
+}
+
+.lfs-container .inspiration-page-banner .carousel-caption > h4 {
+    line-height: 150px;
+    vertical-align: middle;
+}
+
+.lfs-container .inspiration-page-banner .carousel-caption > h4,
+.lfs-container .inspiration-page-banner .carousel-caption > p {
+    font-size: 4.0rem;
+}
+
+.lfs-container .inspiration-page-banner .carousel-caption > h4 > a,
+.lfs-container .inspiration-page-banner .carousel-caption > p {
+    color: #000;
+    font-weight: 400;
+}
+
+.lfs-container .inspiration-page-banner .slides > li:nth-child(1),
+.lfs-container .inspiration-page-banner .slides > li:nth-child(4),
+.lfs-container .inspiration-page-banner .slides > li:nth-child(5) {
+    text-align: center;
+}
+
+.lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > h4,
+.lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > p {
+    margin-top: -30px;
+}
+
+.lfs-container .inspiration-page-banner .slides > li:nth-child(4) .carousel-caption > h4 > a {
+    color: #fff;
+}
+
+
+/* Page - Feedback */
+.lfs-container .feedback-page-wrapper .gform_wrapper {
+    width: 100%;
+}
+
+.lfs-container .feedback-page-wrapper .gform_wrapper > form {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+.lfs-container .feedback-page-wrapper .gform_wrapper .gform_body input:first-child {
+    width: 100%;
+    padding: 15px 5px !important;
+}
+
+
+
+
+/* Post - Week */
+.lfs-container .week-post-wrapper {
+    margin: 0 50px;
+}
+
+.lfs-container .week-post-wrapper .date {
+    color: #2f5d7c;
+}
+
+.lfs-container .week-post-wrapper .description {
+    margin-bottom: 30px;
+}
+
+.lfs-container .week-post-wrapper .video-container,
+.lfs-container .welcome-page-wrapper .videos .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.lfs-container .week-post-wrapper .video-container > iframe,
+.lfs-container .welcome-page-wrapper .videos .video-container > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lfs-container .week-post-wrapper .more-info {
+    margin: 30px 0;
+}
+
+
+/* Post - Topic */
+.lfs-container .topic-post-wrapper .text {
+    margin: 40px 0;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .lfs-container .home-page-wrapper .home-container,
+    .lfs-container .inspiration-page-wrapper .inspiration-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .lfs-container .assessment-page-wrapper {
+        margin: 30px 10px 0 10px;
+    }
+    .lfs-container .assessment-page-wrapper .assessment-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+        font-size: 25px;
+    }
+
+    .lfs-container .inspiration-page-banner .carousel-caption > h4,
+    .lfs-container .inspiration-page-banner .carousel-caption > p {
+        font-size: 1.5rem;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > h4 {
+        margin-top: -10px;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > p {
+        margin-top: -70px;
+        display: block;
+    }
+    .lfs-container .feedback-page-wrapper .gform_wrapper > form {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .lfs-container .home-page-wrapper .home-container,
+    .lfs-container .inspiration-page-wrapper .inspiration-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .lfs-container .assessment-page-wrapper {
+        margin: 30px 30px 0 30px;
+    }
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption > h4,
+    .lfs-container .inspiration-page-banner .carousel-caption > p {
+        font-size: 2.0rem;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption {
+        height: 150px !important;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption > h4 {
+        line-height: 150px;
+        vertical-align: middle;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > h4 {
+        margin-top: -20px;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > p {
+        margin-top: -50px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+        font-size: 25px;
+    }
+    .lfs-container .assessment-page-wrapper {
+        margin: 30px 30px 0 30px;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption > h4,
+    .lfs-container .inspiration-page-banner .carousel-caption > p {
+        font-size: 2.5rem;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption {
+        height: 150px !important;
+    }
+    .lfs-container .inspiration-page-banner .carousel-caption > h4 {
+        line-height: 150px;
+        vertical-align: middle;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > h4 {
+        margin-top: -25px;
+    }
+    .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > p {
+        margin-top: -45px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .lfs-container .inspiration-page-banner .carousel-caption > h4,
+    .lfs-container .inspiration-page-banner .carousel-caption > p {
+        font-size: 3.0rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

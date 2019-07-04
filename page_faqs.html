@@ -883,10 +883,11 @@ var faqPage = document.getElementById('faqs-page');
 
 // Search and display if matched with search keywords
 function faqSearch() {
-    searchResults.innerHTML = '';
+    searchResults.innerHTML = "";
 
-    var searchWord = searchText.value.toLowerCase();
+    var searchWord = searchText.value.toLowerCase().trim();
     var accordionGroups = faqPage.querySelectorAll('.accordion-group');
+    var hasFound = false;
     for (i in accordionGroups) {
         var accordionGroup = accordionGroups[i];
         var accordionText = accordionGroup.innerText;
@@ -895,8 +896,16 @@ function faqSearch() {
             if ( text.includes(searchWord) ) {
                 var node = accordionGroup.cloneNode(true);
                 searchResults.appendChild(node);
+                hasFound = true;
             }
         }
+    }
+    if (!hasFound) {
+        var para  = document.createElement("p");
+        para.setAttribute('class', 'search-message');
+        var node = document.createTextNode("Your search - " + searchWord + " - did not match any documents.");
+        para.appendChild(node);
+        searchResults.appendChild(para);
     }
     
     searchResults.style.display = 'block'; // Search results are displayed

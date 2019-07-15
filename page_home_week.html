@@ -7,8 +7,8 @@
                     [link_with_content content=""]
                     <div class="week-info">
                         <span class="title">[link_with_content]</span>
-                        <span class="date">Sept. 1 ~ Sept. 7</span>
-                        <span class="sub-title">APIE</span>
+                        <span class="date"></span>
+                        <span class="sub-title"></span>
                     </div>
                 </div>
             [/loop]
@@ -95,9 +95,6 @@ var info = [
 var weekItems = document.getElementsByClassName('week-item');
 
 [...weekItems].forEach(function(item, index) {
-  console.log(index);
-  console.log(item);
-  
   var weekInfo = item.querySelector('.week-info');
   var date = weekInfo.querySelector('.date');
   var subTitle = weekInfo.querySelector('.sub-title');

@@ -1,6 +1,7 @@
 /* Page - Home landing page */
 
 .lfs-container .home-page-wrapper .home-container,
+.lfs-container .resources-page-wrapper .resources-container,
 .lfs-container .inspiration-page-wrapper .inspiration-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -13,6 +14,7 @@
 
 .lfs-container .home-page-wrapper br,
 .lfs-container .welcome-page-wrapper br,
+.lfs-container .resources-page-wrapper br,
 .lfs-container .inspiration-page-wrapper br,
 .lfs-container .feedback-page-wrapper br,
 .lfs-container .week-post-wrapper br {
@@ -21,6 +23,7 @@
 
 .lfs-container .home-page-wrapper,
 .lfs-container .welcome-page-wrapper,
+.lfs-container .resources-page-wrapper,
 .lfs-container .inspiration-page-wrapper,
 .lfs-container .feedback-page-wrapper,
 .lfs-container .topic-post-wrapper {
@@ -28,6 +31,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item,
+.lfs-container .resources-page-wrapper .resources-container .resource-item,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item {
     border: 1px solid #ddd;
     position: relative;
@@ -35,11 +39,13 @@
 
 .lfs-container .home-page-wrapper .home-container p,
 .lfs-container .assessment-page-wrapper .assessment-container p,
+.lfs-container .resources-page-wrapper .resources-container p,
 .lfs-container .inspiration-page-wrapper .inspiration-container p {
     display: none;
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item > a,
+.lfs-container .resources-page-wrapper .resources-container .resource-item > a,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > a {
     position: absolute;
     top: 0;
@@ -54,6 +60,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info,
+.lfs-container .resources-page-wrapper .resources-container .resource-item .resource-info,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info {
     color: #fff;
     position: absolute;
@@ -70,11 +77,13 @@
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .title,
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+.lfs-container .resources-page-wrapper .resources-container .resource-item .resource-info .title,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info .title {
     font-size: 1.3rem;
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .title > a,
+.lfs-container .resources-page-wrapper .resources-container .resource-item .resource-info .title > a,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info .title > a {
     color: #fff;
 }
@@ -130,7 +139,8 @@
 
 
 /* Page - FAQS */
-.lfs-container .faqs-text {
+.lfs-container .faqs-text,
+.lfs-container .inspiration-text {
     margin: 30px 0;
 }
 
@@ -169,6 +179,12 @@
     font-weight: normal;
 }
 
+
+/* Page - Resources */
+.lfs-container .resources-page-wrapper {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
 
 
 /* Page - Inspiration */
@@ -275,9 +291,12 @@
     margin: 40px 0;
 }
 
+
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .lfs-container .home-page-wrapper .home-container,
+    .lfs-container .resources-page-wrapper .resources-container,
     .lfs-container .inspiration-page-wrapper .inspiration-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -314,6 +333,7 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .lfs-container .home-page-wrapper .home-container,
+    .lfs-container .resources-page-wrapper .resources-container,
     .lfs-container .inspiration-page-wrapper .inspiration-container {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -130,6 +130,10 @@
 
 
 /* Page - FAQS */
+.lfs-container .faqs-text {
+    margin: 30px 0;
+}
+
 .lfs-container .search-field {
     display: flex;
     justify-content: flex-end;
@@ -143,6 +147,7 @@
     margin-bottom: 0;
 }
 
+.lfs-container .faqs-page-wrapper,
 .lfs-container .faqs-search-results {
     margin-top: 30px;
 }
@@ -151,6 +156,19 @@
     text-align: center;
     font-size: 1.1rem;
 }
+
+.lfs-container  .faqs-page-wrapper .accordion-group .accordion-heading {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.lfs-container  .faqs-page-wrapper .accordion-group .accordion-sub-heading {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+}
+
 
 
 /* Page - Inspiration */

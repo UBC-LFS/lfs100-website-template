@@ -1,3 +1,15 @@
+/* make it display none */
+
+.entry-content br {
+    display: none;
+}
+
+.lfs-container .home-page-wrapper br,
+.lfs-container .resources-page-wrapper br,
+.lfs-container .inspiration-page-wrapper br {
+    display: none;
+}
+
 /* Page - Home landing page */
 
 .lfs-container .home-page-wrapper .home-container,
@@ -8,25 +20,10 @@
     grid-gap: 30px;
 }
 
-/*.author-ho-seok-oh .post-byline {
-    display: none;
-}*/
-
-.lfs-container .home-page-wrapper br,
-.lfs-container .welcome-page-wrapper br,
-.lfs-container .resources-page-wrapper br,
-.lfs-container .inspiration-page-wrapper br,
-.lfs-container .feedback-page-wrapper br,
-.lfs-container .week-post-wrapper br {
-    display: none;
-}
 
 .lfs-container .home-page-wrapper,
-.lfs-container .welcome-page-wrapper,
 .lfs-container .resources-page-wrapper,
-.lfs-container .inspiration-page-wrapper,
-.lfs-container .feedback-page-wrapper,
-.lfs-container .topic-post-wrapper {
+.lfs-container .inspiration-page-wrapper {
     margin: 0 40px;
 }
 
@@ -91,17 +88,6 @@
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
     margin: 10px 0;
     height: 22px;
-}
-
-
-/* Page - Welcome */
-
-.lfs-container .welcome-page-wrapper > img {
-    border: 1px solid #ddd;
-    padding: 3px
-}
-.lfs-container .welcome-page-wrapper .text {
-    margin: 40px 0;
 }
 
 
@@ -246,49 +232,6 @@
 .lfs-container .feedback-page-wrapper .gform_wrapper .gform_body input:first-child {
     width: 100%;
     padding: 15px 5px !important;
-}
-
-
-
-
-/* Post - Week */
-.lfs-container .week-post-wrapper {
-    margin: 0 50px;
-}
-
-.lfs-container .week-post-wrapper .date {
-    color: #2f5d7c;
-}
-
-.lfs-container .week-post-wrapper .description {
-    margin-bottom: 30px;
-}
-
-.lfs-container .week-post-wrapper .video-container,
-.lfs-container .welcome-page-wrapper .videos .video-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-}
-
-.lfs-container .week-post-wrapper .video-container > iframe,
-.lfs-container .welcome-page-wrapper .videos .video-container > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.lfs-container .week-post-wrapper .more-info {
-    margin: 30px 0;
-}
-
-
-/* Post - Topic */
-.lfs-container .topic-post-wrapper .text {
-    margin: 40px 0;
 }
 
 

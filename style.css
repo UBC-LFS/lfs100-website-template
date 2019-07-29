@@ -28,6 +28,16 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item,
+.lfs-container .home-page-wrapper .home-container .week-item > img,
+.lfs-container .resources-page-wrapper .resources-container .resource-item,
+.lfs-container .resources-page-wrapper .resources-container .resource-item > img,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item,
+.lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > img {
+    max-height: 228px;
+    width: 100%;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item,
 .lfs-container .resources-page-wrapper .resources-container .resource-item,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item {
     border: 1px solid #ddd;
@@ -66,14 +76,21 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
+    padding: 5px;
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info > span {
     display: block;
 }
 
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .title,
-.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
 .lfs-container .resources-page-wrapper .resources-container .resource-item .resource-info .title,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info .title {
     font-size: 1.3rem;
@@ -86,7 +103,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
-    margin: 10px 0;
+    margin-top: 10px;
     height: 22px;
 }
 
@@ -243,9 +260,30 @@
     .lfs-container .inspiration-page-wrapper .inspiration-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    
+    .lfs-container .home-page-wrapper,
+    .lfs-container .resources-page-wrapper,
+    .lfs-container .inspiration-page-wrapper {
+        max-width: 343px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
+        line-height: 1.0rem;
+        font-size: 1.0rem;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+        line-height: 1.8rem;
+        font-size: 1.8rem;
+    }
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .sub-title {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
+    }
     .lfs-container .assessment-page-wrapper {
-        margin: 30px 10px 0 10px;
+        //margin: 30px 10px 0 10px;
+        max-width: 468px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .lfs-container .assessment-page-wrapper .assessment-container {
         display: grid;
@@ -255,17 +293,18 @@
     .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
         font-size: 25px;
     }
-
     .lfs-container .inspiration-page-banner .carousel-caption > h4,
     .lfs-container .inspiration-page-banner .carousel-caption > p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > h4 {
         margin-top: -10px;
+        font-size: 1.0rem;
     }
     .lfs-container .inspiration-page-banner .slides > li:nth-child(3) .carousel-caption > p {
         margin-top: -70px;
         display: block;
+        font-size: 1.0rem;
     }
     .lfs-container .feedback-page-wrapper .gform_wrapper > form {
         margin: 0;
@@ -279,6 +318,23 @@
     .lfs-container .resources-page-wrapper .resources-container,
     .lfs-container .inspiration-page-wrapper .inspiration-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item,
+    .lfs-container .home-page-wrapper .home-container .week-item > img,
+    .lfs-container .resources-page-wrapper .resources-container .resource-item,
+    .lfs-container .resources-page-wrapper .resources-container .resource-item > img,
+    .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item,
+    .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > img {
+        max-height: 196px;
+        width: 100%;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
+        line-height: 1.0rem;
+        font-size: 1.0rem;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+        line-height: 1.7rem;
+        font-size: 1.7rem;
     }
     .lfs-container .assessment-page-wrapper {
         margin: 30px 30px 0 30px;
@@ -308,6 +364,23 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .lfs-container .home-page-wrapper .home-container .week-item,
+    .lfs-container .home-page-wrapper .home-container .week-item > img,
+    .lfs-container .resources-page-wrapper .resources-container .resource-item,
+    .lfs-container .resources-page-wrapper .resources-container .resource-item > img,
+    .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item,
+    .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > img {
+        max-height: 140px;
+        width: 100%;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
+        line-height: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+        line-height: 1.3rem;
+        font-size: 1.3rem;
+    }
     .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
         font-size: 25px;
     }
@@ -335,6 +408,14 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
+        line-height: 1.0rem;
+        font-size: 1.0rem;
+    }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+        line-height: 1.6rem;
+        font-size: 1.6rem;
+    }
     .lfs-container .inspiration-page-banner .carousel-caption > h4,
     .lfs-container .inspiration-page-banner .carousel-caption > p {
         font-size: 3.0rem;
@@ -343,5 +424,8 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .sub-title {
+        line-height: 2.2rem;
+        font-size: 2.2rem;
+    }
 }

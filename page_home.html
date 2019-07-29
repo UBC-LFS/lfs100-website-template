@@ -7,14 +7,15 @@
                     [link_with_content content=""]
                     <div class="week-info">
                         <span class="title">[link_with_content]</span>
-                        <span class="date">date</span>
                         <span class="sub-title">sub-title</span>
+                        <span class="date">date</span>
                     </div>
                 </div>
             [/loop]
         </div>
     </div>
 </div>
+
 
 
 
@@ -31,64 +32,64 @@
 
 var info = [
   { 
-    "week": "Syllabus",
+    "week": "LFS 100 Syllabus",
+    "date": "Read me!", 
+    "sub-title": ""
+  },
+  { 
+    "week": "Class 1",
+    "date": "Sept 4 ~ 9",
+    "sub-title": "The wisdom in A PIE"
+  },
+  { 
+    "week": "Class 2",
+    "date": "Sept 11 ~ 16",
+    "sub-title": "You can do hard things"
+  },
+  { 
+    "week": "Class 3",
+    "date": "Sept 18 ~ 23",
+    "sub-title": "Tuum Est: It is yours"
+  },
+  { 
+    "week": "Class 4",
+    "date": "Sept 25 ~ 30", 
+    "sub-title": "Start from where you are"
+  },
+  { 
+    "week": "Class 5",
+    "date": "Oct 2 ~ 7", 
+    "sub-title": "The obstacle is the path"
+  },
+  { 
+    "week": "Class 6",
+    "date": "Oct 9 ~ 14", 
+    "sub-title": "Do the right thing"
+  },
+  { 
+    "week": "Class 7",
+    "date": "Oct 23 ~ 28", 
+    "sub-title": "Nothing works unless you do"
+  },
+  { 
+    "week": "Class 8",
+    "date": "Oct 30 ~ Nov 4",
+    "sub-title": "Assess & Adjust"
+  },
+  { 
+    "week": "Class 9",
+    "date": "Nov 6 ~ 11",
+    "sub-title": "Don't let perfect be the enemy of good"
+  },
+  { 
+    "week": "Class 10",
+    "date": "Nov 20 ~ 25",
+    "sub-title": "Celebrate the journey"
+  },
+  { 
+    "week": "Resources to support your first-year experience",
     "date": "", 
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 1",
-    "date": "Sept. 1 ~ Setp. 7",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 2",
-    "date": "Sept. 8 ~ Setp. 14",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 3",
-    "date": "Sept. 15 ~ Setp. 21",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 4",
-    "date": "Sept. 22 ~ Setp. 28", 
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 5",
-    "date": "Sept. 29 ~ Setp. 30", 
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 6",
-    "date": "Oct. 1 ~ Oct. 7", 
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 7",
-    "date": "Oct. 8 ~ Oct. 14", 
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 8",
-    "date": "Oct. 15 ~ Oct. 21",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 9",
-    "date": "Oct. 22 ~ Oct. 28",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Week 10",
-    "date": "Oct. 29 ~ Oct. 31",
-    "sub-title": "APIE "
-  },
-  { 
-    "week": "Resources",
-    "date": "", 
-    "sub-title": "APIE "
+    "sub-title": ""
   }
 ];
 
@@ -99,7 +100,12 @@ var weekItems = document.getElementsByClassName('week-item');
   var weekInfo = item.querySelector('.week-info');
   var date = weekInfo.querySelector('.date');
   var subTitle = weekInfo.querySelector('.sub-title');
+  if (index == 3) {
+    subTitles = info[index]['sub-title'].split(':');
+    subTitle.innerHTML = subTitles[0].italics() + ': ' + subTitles[1];
+  } else { 
+    subTitle.innerHTML = info[index]['sub-title'];
+  }
   date.innerHTML = info[index]['date'];
-  subTitle.innerHTML = info[index]['sub-title'];
 });
 </javascript>

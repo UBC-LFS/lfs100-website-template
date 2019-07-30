@@ -6,9 +6,9 @@
                     [image_with_src]
                     [link_with_content content=""]
                     <div class="week-info">
-                        <span class="title">[link_with_content]</span>
                         <span class="sub-title">sub-title</span>
                         <span class="date">date</span>
+                        <span class="title">[link_with_content]</span>
                     </div>
                 </div>
             [/loop]
@@ -27,69 +27,69 @@
 
 
 
-<javascript>
+<script>
 // Change name, date, sub-title of weeks
 
 var info = [
   { 
-    "week": "LFS 100 Syllabus",
-    "date": "Read me!", 
-    "sub-title": ""
+    "title": "LFS 100 Syllabus",
+    "sub-title": "",
+    "date": "Read me!"
   },
   { 
-    "week": "Class 1",
-    "date": "Sept 4 ~ 9",
-    "sub-title": "The wisdom in A PIE"
+    "title": "The wisdom in A PIE",
+    "sub-title": "Class 1",
+    "date": "Sept 4 - 9"
   },
   { 
-    "week": "Class 2",
-    "date": "Sept 11 ~ 16",
-    "sub-title": "You can do hard things"
+    "title": "You can do hard things",
+    "sub-title": "Class 2",
+    "date": "Sept 11 - 16"
   },
   { 
-    "week": "Class 3",
-    "date": "Sept 18 ~ 23",
-    "sub-title": "Tuum Est: It is yours"
+    "title": "Tuum Est: It is yours",
+    "sub-title": "Class 3",
+    "date": "Sept 18 - 23"
   },
   { 
-    "week": "Class 4",
-    "date": "Sept 25 ~ 30", 
-    "sub-title": "Start from where you are"
+    "title": "Start from where you are",
+    "sub-title": "Class 4",
+    "date": "Sept 25 - 30" 
   },
   { 
-    "week": "Class 5",
-    "date": "Oct 2 ~ 7", 
-    "sub-title": "The obstacle is the path"
+    "title": "The obstacle is the path",
+    "sub-title": "Class 5",
+    "date": "Oct 2 - 7"
   },
   { 
-    "week": "Class 6",
-    "date": "Oct 9 ~ 14", 
-    "sub-title": "Do the right thing"
+    "title": "Do the right thing",
+    "sub-title": "Class 6",
+    "date": "Oct 9 - 14"
   },
   { 
-    "week": "Class 7",
-    "date": "Oct 23 ~ 28", 
-    "sub-title": "Nothing works unless you do"
+    "title": "Nothing works unless you do",
+    "sub-title": "Class 7",
+    "date": "Oct 23 - 28"
   },
   { 
-    "week": "Class 8",
-    "date": "Oct 30 ~ Nov 4",
-    "sub-title": "Assess & Adjust"
+    "title": "Assess & Adjust",
+    "sub-title": "Class 8",
+    "date": "Oct 30 - Nov 4"
   },
   { 
-    "week": "Class 9",
-    "date": "Nov 6 ~ 11",
-    "sub-title": "Don't let perfect be the enemy of good"
+    "title": "Don't let perfect be the enemy of good",
+    "sub-title": "Class 9",
+    "date": "Nov 6 - 11"
   },
   { 
-    "week": "Class 10",
-    "date": "Nov 20 ~ 25",
-    "sub-title": "Celebrate the journey"
+    "title": "Celebrate the journey",
+    "sub-title": "Class 10",
+    "date": "Nov 20 - 25"
   },
   { 
-    "week": "Resources to support your first-year experience",
-    "date": "", 
-    "sub-title": ""
+    "title": "Resources to support your first-year experience",
+    "sub-title": "",
+    "date": ""
   }
 ];
 
@@ -98,14 +98,34 @@ var weekItems = document.getElementsByClassName('week-item');
 
 [...weekItems].forEach(function(item, index) {
   var weekInfo = item.querySelector('.week-info');
-  var date = weekInfo.querySelector('.date');
+  
+  var title = weekInfo.querySelector('.title');
   var subTitle = weekInfo.querySelector('.sub-title');
-  if (index == 3) {
-    subTitles = info[index]['sub-title'].split(':');
-    subTitle.innerHTML = subTitles[0].italics() + ': ' + subTitles[1];
-  } else { 
-    subTitle.innerHTML = info[index]['sub-title'];
-  }
+  var date = weekInfo.querySelector('.date');
+  
+  subTitle.innerHTML = info[index]['sub-title'];
   date.innerHTML = info[index]['date'];
+  
+  if (index == 0) {
+    weekInfo.removeChild(subTitle);
+    weekInfo.removeChild(date);
+    weekInfo.appendChild(date);
+    
+  } else if (index == 1) {
+    titles = info[index]['title'].split(' ');
+    title.childNodes[0].innerHTML = titles[0] + ' ' + titles[1] + '<br />' + titles[2] + ' ' + titles[3] + ' ' + titles[4];
+    
+  } else if (index == 3) {
+    titles = info[index]['title'].split(':');
+    title.childNodes[0].innerHTML = titles[0].italics() + ': <br />' + titles[1];
+    
+  } else if (index == 11) {
+    weekInfo.removeChild(subTitle);
+    weekInfo.removeChild(date);
+  }
+
 });
-</javascript>
+
+
+
+</script>

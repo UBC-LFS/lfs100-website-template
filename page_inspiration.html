@@ -33,3 +33,24 @@
     display: none;
 }
 </style>
+
+
+<script>
+
+var flexSlides = document.getElementsByClassName('flex-slide');
+
+[...flexSlides].forEach(function(item, index) {
+  var carouselCaption = item.querySelector('.carousel-caption');
+  var h4 = carouselCaption.childNodes[0];
+  var text = h4.childNodes[0].innerHTML.trim();
+  if (index == 2) {
+    var texts = text.split(':');
+    h4.childNodes[0].innerHTML = texts[0].italics() + ': ' + texts[1];
+  } else if (index == 4) {
+    var texts = text.split(' ');
+    h4.childNodes[0].innerHTML = '<span>' + texts[0] + ' ' + texts[1] + ' ' + texts[2] + '</span><span>' + texts[3] + ' ' + texts[4] + '</span>';
+  }
+});
+
+
+</script>

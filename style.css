@@ -80,8 +80,8 @@
 
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
-    font-size: 2.1rem;
-    line-height: 2.1rem;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
     margin-top: 10px;
     font-weight: bold;
 }
@@ -91,15 +91,20 @@
     text-decoration: none;
 }
 
-.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
+    display: inline-block;
     margin-top: 10px;
-    line-height: 1.3rem;
-    font-size: 1.3rem;
+    line-height: 1.1rem;
+    font-size: 1.1rem;
+}
+
+.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
-    margin-top: 10px;
-    height: 22px;
+    margin-left: 5px;
 }
 
 
@@ -292,18 +297,18 @@
         line-height: 1.8rem;
         font-size: 1.8rem;
     }
-    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
-        line-height: 1.0rem;
-        font-size: 1.0rem;
-    }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .title,
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.1rem;
-        font-size: 1.1rem;
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
+        line-height: 0.9rem;
+        font-size: 0.9rem;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 1.4rem;
-        font-size: 1.4rem;
+        line-height: 1.7rem;
+        font-size: 1.7rem;
+    }
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
+        line-height: 1.5rem;
+        font-size: 1.5rem;
     }
     .lfs-container .assessment-page-wrapper {
         //margin: 30px 10px 0 10px;
@@ -350,21 +355,21 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
-        line-height: 1.6rem;
-        font-size: 1.6rem;
+        line-height: 2.0rem;
+        font-size: 2.0rem;
     }
-    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
         line-height: 1.0rem;
         font-size: 1.0rem;
     }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .title,
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.1rem;
-        font-size: 1.1rem;
-    }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 1.3rem;
-        font-size: 1.3rem;
+        line-height: 1.8rem;
+        font-size: 1.8rem;
+    }
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
+        line-height: 1.4rem;
+        font-size: 1.4rem;
     }
     .lfs-container .assessment-page-wrapper {
         margin: 30px 30px 0 30px;
@@ -402,26 +407,22 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
-        line-height: 1.15rem;
-        font-size: 1.15rem;
-        margin-top: 5px;
-    }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .title,
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 0.8rem;
-        font-size: 0.8rem;
+        line-height: 1.3rem;
+        font-size: 1.3rem;
+        margin-top: 7px;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 1.0rem;
-        font-size: 1.0rem;
+        line-height: 1.1rem;
+        font-size: 1.1rem;
     }
-    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
         line-height: 0.9rem;
         font-size: 0.9rem;
     }
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
-        margin-top: 3px;
-        font-size: 0.5rem;
+        line-height: 0.7rem;
+        font-size: 0.7rem;
     }
     .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
         font-size: 25px;
@@ -458,24 +459,21 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
+        line-height: 1.8rem;
+        font-size: 1.8rem;
+    }
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
         line-height: 1.6rem;
         font-size: 1.6rem;
     }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .title,
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.1rem;
-        font-size: 1.1rem;
-    }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
         line-height: 1.4rem;
         font-size: 1.4rem;
     }
-    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
+    .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
         line-height: 1.0rem;
         font-size: 1.0rem;
-    }
-    .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
-        font-size: 0.6rem;
     }
     .lfs-container .inspiration-page-banner .carousel-caption > h4,
     .lfs-container .inspiration-page-banner .carousel-caption > p {
@@ -498,14 +496,13 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .title,
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.3rem;
-        font-size: 1.3rem;
-    }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 1.8rem;
-        font-size: 1.8rem;
+        line-height: 2.1rem;
+        font-size: 2.1rem;
+    }
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
+        line-height: 1.9rem;
+        font-size: 1.9rem;   
     }
     .lfs-container .inspiration-page-banner .slides > li:nth-child(7) .carousel-caption > h4 {
         font-size: 3.3rem;

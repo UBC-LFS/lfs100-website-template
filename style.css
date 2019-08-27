@@ -28,6 +28,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item,
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item,
 .lfs-container .resources-page-wrapper .resources-container .resource-item,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item {
     border: 1px solid #ddd;
@@ -42,6 +43,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item > a,
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item > a,
 .lfs-container .resources-page-wrapper .resources-container .resource-item > a,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item > a {
     position: absolute;
@@ -57,6 +59,7 @@
 }
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info,
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item  .assessment-info,
 .lfs-container .resources-page-wrapper .resources-container .resource-item .resource-info,
 .lfs-container .inspiration-page-wrapper .inspiration-container .topic-item .topic-info {
     color: #fff;
@@ -70,7 +73,8 @@
 }
 
 
-.lfs-container .home-page-wrapper .home-container .week-item .week-info > span.title > a > br {
+.lfs-container .home-page-wrapper .home-container .week-item .week-info > span.title > a > br,
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info > .title > a > br {
     display: block;
 }
 
@@ -78,6 +82,14 @@
     display: block;
 }
 
+.lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
+    line-height: 2.1rem;
+    font-size: 2.1rem;
+}
+.lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+}
 
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
     font-size: 2.3rem;
@@ -99,14 +111,15 @@
     font-size: 1.1rem;
 }
 
-.lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title {
-
-}
-
 .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
     margin-left: 5px;
 }
 
+.lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .date {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
 
 
 /* Assessments */
@@ -120,12 +133,13 @@
     grid-gap: 30px;
 }
 
+/*
 .lfs-container .assessment-page-wrapper .assessment-container .assessment-item {
     position: relative;
     border: 1px solid #ddd;
 }
 
-.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name {
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info {
     position: absolute;
     background-color: rgba(122, 122, 122, 0.7);
     left: 0;
@@ -135,9 +149,9 @@
     text-align: center;
     padding: 0 5px 5px 5px;
 }
-
-.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title > a {
-    color: black;
+*/
+.lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info .title > a {
+    color: #ffffff;
 }
 
 
@@ -307,8 +321,8 @@
         font-size: 1.7rem;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.5rem;
-        font-size: 1.5rem;
+        line-height: 1.3rem;
+        font-size: 1.3rem;
     }
     .lfs-container .assessment-page-wrapper {
         //margin: 30px 10px 0 10px;
@@ -321,7 +335,7 @@
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
     }
-    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info .title {
         font-size: 25px;
     }
     .lfs-container .inspiration-page-banner .carousel-caption > h4,
@@ -355,8 +369,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .title {
-        line-height: 2.0rem;
-        font-size: 2.0rem;
+        line-height: 1.7rem;
+        font-size: 1.7rem;
     }
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
@@ -364,17 +378,17 @@
         font-size: 1.0rem;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 1.8rem;
-        font-size: 1.8rem;
+        line-height: 1.6rem;
+        font-size: 1.6rem;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.4rem;
-        font-size: 1.4rem;
+        line-height: 1.2rem;
+        font-size: 1.2rem;
     }
     .lfs-container .assessment-page-wrapper {
         margin: 30px 30px 0 30px;
     }
-    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info .title {
         font-size: 20px;
         line-height: 25px;
     }
@@ -424,7 +438,10 @@
         line-height: 0.7rem;
         font-size: 0.7rem;
     }
-    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-name .title {
+    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(2) .week-info .date {
+        font-size: 0.9rem;
+    }
+    .lfs-container .assessment-page-wrapper .assessment-container .assessment-item .assessment-info .title {
         font-size: 25px;
     }
     .lfs-container .assessment-page-wrapper {
@@ -467,8 +484,8 @@
         font-size: 1.6rem;
     }
     .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.4rem;
-        font-size: 1.4rem;
+        line-height: 1.2rem;
+        font-size: 1.2rem;
     }
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .sub-title,
     .lfs-container .home-page-wrapper .home-container .week-item .week-info .date {
@@ -496,14 +513,6 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(20) .week-info .title {
-        line-height: 2.1rem;
-        font-size: 2.1rem;
-    }
-    .lfs-container .home-page-wrapper .home-container div.week-item:nth-child(24) .week-info .title {
-        line-height: 1.9rem;
-        font-size: 1.9rem;   
-    }
     .lfs-container .inspiration-page-banner .slides > li:nth-child(7) .carousel-caption > h4 {
         font-size: 3.3rem;
     }

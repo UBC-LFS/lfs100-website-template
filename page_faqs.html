@@ -6,7 +6,7 @@
         <button id="faqs-search-btn">Search</button>
         <button id="faqs-clear-btn">Clear</button>
     </div>
-    <div id="faqs-search-results" class="faqs-search-results" style="display: none;"></div>
+    <div id="faqs-search-results" class="faqs-search-results"></div>
 
     <div id="faqs-page" class="faqs-page-wrapper">
         [accordions collapsible=true active=false style=accordion-container]
@@ -19,7 +19,7 @@
                 <div class="accordion-inner">
                 <ul>
                  	<li>The UBC Academic calendar is where you can find your degree requirements, information regarding awards, distinctions, learn more about co-op, dates for the winter session, summer session and exam periods, and any academic policies or regulations at UBC.</li>
-                 	<li><em>Please keep in mind the <a href="http://www.calendar.ubc.ca/vancouver/index.cfm">2019/20 UBC Academic Calendar</a> has all of the official policies, regulations, dates and information that UBC students are responsible for this year.</em></li>
+                 	<li><em>Please keep in mind the <a target="_blank" href="http://www.calendar.ubc.ca/vancouver/index.cfm">2019/20 UBC Academic Calendar</a> has all of the official policies, regulations, dates and information that UBC students are responsible for this year.</em></li>
                  	<li>We recommend you bookmark this link and/or bookmark specific sections of the academic calendar that is relevant to you such as your degree requirements. This is because every year, the previous academic calendar gets archived and this can make it more difficult to search for it so we recommend you bookmark <a href="http://www.calendar.ubc.ca/vancouver/index.cfm?tree=12,194,0,0">this page</a>.</li>
                 </ul>
                 </div>
@@ -2617,3 +2617,92 @@ Jane Doe
 
 </div>
 </div>
+
+
+
+<script>
+
+
+var pageTitle = document.querySelector('.page-title');
+
+
+/* Change a page title */
+pageTitle.innerHTML = "Frequently Asked Questions (FAQs)";
+
+
+
+var searchText = document.getElementById('faqs-search-text');
+var searchResults = document.getElementById('faqs-search-results');
+var faqPage = document.getElementById('faqs-page');
+
+// Search and display if matched with search keywords
+function faqSearch() {
+  searchResults.innerHTML = "";
+  
+  var searchWord = searchText.value.toLowerCase().trim();
+  
+  // Return if the search keyword is empty
+  if (searchWord.length == 0) {
+    searchText.value = '';
+    return;
+  }
+  
+  var innerContents = faqPage.querySelectorAll('.inner-contents');
+  
+  var hasFound = false;
+  
+  for (var j in innerContents) {
+    var innerContent = innerContents[j];
+    
+    if ( typeof innerContent === 'object' ) {
+      var accordionGroups = innerContent.querySelectorAll('.accordion-group');
+            
+      for (var i in accordionGroups) {
+        
+        var accordionGroup = accordionGroups[i];
+        if ( typeof accordionGroup === 'object' ) {
+          
+          var accordionText = accordionGroup.textContent;
+          if ( accordionText ) {
+            
+            var text = accordionText.toLowerCase();
+            if ( text.indexOf(searchWord) > -1 ) {
+                var node = accordionGroup.cloneNode(true);
+                searchResults.appendChild(node);
+                hasFound = true;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  if (!hasFound) {
+    var para  = document.createElement("p");
+    para.setAttribute('class', 'search-message');
+    
+    var node = document.createTextNode("Your search - " + searchWord + " - did not match any documents.");
+    para.appendChild(node);
+    
+    searchResults.appendChild(para);
+  }
+  
+  searchResults.style.display = 'block'; // Search results are displayed
+  faqPage.style.display = 'none'; // Faq page is not displayed
+}
+
+// Clear all results and a search text
+function fsqClear() {
+  searchText.value = '';
+  searchResults.innerHTML = '';
+  //searchResults.style.display = 'none';
+  faqPage.style.display = 'block';
+}
+
+// Add event listener
+document.getElementById("faqs-search-btn").addEventListener("click", faqSearch);
+document.getElementById("faqs-clear-btn").addEventListener("click", fsqClear);
+
+
+</script>

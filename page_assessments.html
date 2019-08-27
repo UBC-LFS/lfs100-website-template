@@ -3,8 +3,9 @@
         <div class="assessment-container">
             [loop query="category_name=Assessment&posts_per_page=4&orderby=the_date&order=asc"]
                 <div class="assessment-item">
-                    [image_with_src with_permalink="1"]
-                    <div class="assessment-name">
+                    [image_with_src]
+                    [link_with_content content=""]
+                    <div class="assessment-info">
                         <h2 class="title">[link_with_content]</h2>
                     </div>
                 </div>
@@ -12,3 +13,26 @@
         </div>
     </div>
 </div>
+
+<script>
+
+
+var assessmentItems = document.getElementsByClassName('assessment-item');
+
+[...assessmentItems].forEach(function(item, index) {
+
+  var assessmentInfo = item.querySelector('.assessment-info');
+  var title = assessmentInfo.querySelector('.title');
+
+  if (index === 0) {
+    console.log(title.childNodes);
+    var text = title.childNodes[0].innerHTML.trim();
+    titles = text.split(' ')
+    console.log(titles);
+    title.childNodes[0].innerHTML = titles[0] + ' ' + titles[1] + ' ' + titles[2] + '<br />' + titles[3] + ' ' + titles[4];
+    console.log( title.childNodes[0].innerHTML );
+  }
+});
+
+
+</script>
